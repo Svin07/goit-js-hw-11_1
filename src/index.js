@@ -17,6 +17,7 @@ form.addEventListener('submit', hendlerSubmit);
 
 let currentPage = 1;
 let searchQuery = '';
+const page = 1;
 
 function hendlerSubmit(evt) {
   evt.preventDefault();
@@ -26,7 +27,7 @@ function hendlerSubmit(evt) {
   
 
 
-  getPhoto(searchQuery, page = 1)
+  getPhoto(searchQuery, page)
     .then(data => {
     (list.innerHTML = createMarkup(data.hits));
     if (data.totalHits > 1) {
