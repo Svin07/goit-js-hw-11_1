@@ -42,7 +42,7 @@ else {
           Notiflix.Report.info("Sorry, there are no images matching your search query. Please try again.");
   }
   }
-catch(err)  {Notiflix.Report.failure(err)};
+catch(err)  {Notiflix.Report.failure(err); console.log(err)};
 console.log(err)
 }
 }
@@ -82,6 +82,6 @@ async function hendlerBtn() {
           }
         }
   
-  catch(err) {Notiflix.Report.failure(err)}
+  catch(err) {Notiflix.Report.failure(err); console.log(err)}
 
       }
